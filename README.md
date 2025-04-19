@@ -31,4 +31,29 @@
 ---
 
 ## 📁 Project Structure
+PakClothIntel/ ├── scrapers/ # Brand-specific scrapers ├── pipeline/ # ETL scripts ├── aws/ # Infra: Lambda, Glue, Step Functions ├── ai/ # LangChain + LLM agents ├── vector_search/ # Bonus: Product similarity ├── app/ # Streamlit frontend ├── notebooks/ # EDA and experiments ├── data/ # Data storage └── utils/ # Helpers (e.g., logger, S3)
 
+## 💡 Sample Business Queries
+
+- Which brands offer the highest discounts in women's wear this month?
+- What price range dominates across all brands?
+- Which cities have the most physical stores?
+- How does product pricing differ between casual and formal wear?
+- Are there brands launching similar products in the same timeframe?
+
+---
+
+## 🔨 Setup Instructions
+
+```bash
+# 1. Clone this repo
+git clone https://github.com/your-username/PakClothIntel.git && cd PakClothIntel
+
+# 2. Install Python dependencies
+pip install -r requirements.txt
+
+# 3. Run a sample scraper
+python scrapers/khaadi.py
+
+# 4. Launch Streamlit dashboard
+streamlit run app/main.py
